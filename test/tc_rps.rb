@@ -1,13 +1,13 @@
 #!/usr/bin/ruby
-require 'rps.rb'
+require 'rps'
 require 'test/unit'
 
 class TestRockPaperScissors < Test::Unit::TestCase
 
 	def correct_answer(x)
-		return true if x == /Hay un empate/
-		return true if x == /Ha ganado la maquina; (\w+) defeats(\w+)/ and RockPaperScissors.defeat[$1.to_sym] == $2.to_sym
-		return true if x == /Muy bien, has ganado; (\w+) beats (\w+)/ and RockPaperScissors.defeat[$1.to_sym] == $2.to_sym
+		return true if x == /Hay un empate./
+		return true if x == /Ha ganado la maquina: (\w+) gana a (\w+)/ and RockPaperScissors.defeat[$1.to_sym] == $2.to_sym
+		return true if x == /Muy bien, has ganado: (\w+) gana a (\w+)/ and RockPaperScissors.defeat[$1.to_sym] == $2.to_sym
 	end
 
 	def test_play
@@ -25,7 +25,7 @@ class TestRockPaperScissors < Test::Unit::TestCase
 		
 	end
 
-	def test_wrong_play
+	def test_wrong_play # Genera un error
 		assert_raise (SintaxError) {RockPaperScissors.play('fire')}
 	end
 

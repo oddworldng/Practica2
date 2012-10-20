@@ -17,7 +17,7 @@ class RockPaperScissors
 			
 
 			if (player_throw == computer_throw)
-				puts "Hay un empate.\n Jugada del computador: #{computer_throw}\n Jugada tuya: #{player_throw}"
+				puts "Hay un empate."
 			elsif (player_throw == @@defeat[computer_throw])
 				puts "Ha ganado la maquina: #{computer_throw} gana a #{player_throw}"
 			else

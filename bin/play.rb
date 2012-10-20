@@ -1,7 +1,6 @@
 #!/usr/bin/ruby
-require 'rps.rb'
+require 'rps'
 
-#rps = RockPaperScissors.new
 print "Introduce tu jugada (rock, paper, scissors): "
 STDOUT.flush
 jugada = gets.chomp
