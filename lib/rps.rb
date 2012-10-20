@@ -7,7 +7,7 @@ class RockPaperScissors
 	@@defeat = {:rock => :scissors, :paper => :rock, :scissors => :paper}
 	@@throws = @@defeat.keys
 
-	#class << self
+	class << self
 
 		def play(player_throw)
 
@@ -25,5 +25,5 @@ class RockPaperScissors
 			end # end - if
 
 		end # end - play
-	#end # end - classmethod
+	end # end - classmethod
 end # end - class
